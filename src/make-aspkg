@@ -1,0 +1,70 @@
+#!/bin/sh
+
+if [ -z "${1}" ]; then
+    echo "Missing argument!"
+    exit 1
+fi
+
+if [ -z "${TMPDIR}" ]; then
+    TEMP_DIR="/tmp"
+else
+    TEMP_DIR="${TMPDIR}"
+fi
+
+PACKAGE_ROOT_DIR="${TEMP_DIR}/android-studio-package"
+PACKAGE_LIB_DIR="${PACKAGE_ROOT_DIR}/usr/lib"
+PACKAGE_AS_DIR="${PACKAGE_LIB_DIR}/android-studio"
+CURRENT_DIR=$(pwd)
+
+read -p "Please specify the version: " ANDROID_STUDIO_VERSION
+
+if [ -z "${ANDROID_STUDIO_VERSION}" ]; then
+    ANDROID_STUDIO_VERSION=1.0
+fi
+
+## Extract Android Studio in "lib" directory
+mkdir -p "${PACKAGE_LIB_DIR}"
+unzip "${1}" -d "${PACKAGE_LIB_DIR}"
+
+## Use system JRE
+rm -rf "${PACKAGE_AS_DIR}/jre/"
+
+## Copy Debian package files
+mkdir "${PACKAGE_ROOT_DIR}/debian/"
+cp -R /usr/share/android-studio-package/debian "${PACKAGE_ROOT_DIR}"
+
+## Copy copyright file
+cp "${PACKAGE_AS_DIR}/LICENSE.txt" "${PACKAGE_ROOT_DIR}/debian/copyright"
+
+## Insert maintainer name in control file
+if [ -n "${DEBFULLNAME}" ]; then
+    MAINTAINER_NAME=${DEBFULLNAME}
+else
+    MAINTAINER_NAME="$(getent passwd $(whoami) | cut -d ':' -f 5 | cut -d, -f 1)"
+fi
+
+sed -i "s/MAINTAINER_NAME/${MAINTAINER_NAME}/" "${PACKAGE_ROOT_DIR}/debian/control"
+
+## Insert maintainer mail in control file
+if [ -n "${DEBEMAIL}" ]; then
+    MAINTAINER_MAIL=${DEBEMAIL}
+else
+    MAINTAINER_MAIL="$(whoami)@$(hostname --fqdn )"
+fi
+
+sed -i "s/MAINTAINER_MAIL/${MAINTAINER_MAIL}/" ${PACKAGE_ROOT_DIR}/debian/control
+
+## Create changelog
+cd ${PACKAGE_ROOT_DIR}
+dch --create --package android-studio -v "${ANDROID_STUDIO_VERSION}" "This package was created with android-studio-package."
+dch --release ""
+
+## Build the package
+debuild
+mv ../android-studio_*.deb "${CURRENT_DIR}/"
+
+## Clean up
+rm ../android-studio_*
+cd ..
+rm -rf "${PACKAGE_ROOT_DIR}"
+exit 0

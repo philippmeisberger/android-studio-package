@@ -1,0 +1,2 @@
+src/make-aspkg usr/bin/
+debian/templates/* usr/share/android-studio-package/debian/

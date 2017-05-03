@@ -1,0 +1,12 @@
+Source: android-studio-package
+Priority: extra
+Maintainer: Philipp Meisberger <team@pm-codeworks.de>
+Build-Depends: debhelper (>= 9)
+Section: shells
+Standards-Version: 3.9.6
+
+Package: android-studio-package
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, unzip
+Description: Android Studio Debian package creator
+ Creates Debian package from Android Studio .zip file.

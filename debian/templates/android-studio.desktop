@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Android Studio
+Comment=Offical Android IDE
+Exec=/usr/lib/android-studio/bin/studio.sh
+Icon=/usr/share/pixmaps/studio.png
+Categories=Application;IDE;Development;GTK;GUIDesigner;
+Terminal=false
+StartupNotify=false

@@ -1,4 +1,4 @@
-.TH make-aspkg 1 "May 2017" "" "Android Studio Packer"
+.TH make-aspkg 1 "May 2017" "" "Android Studio Debian package builder"
 
 .SH NAME
 \fBmake-aspkg\fP - Builds Debian package from Android Studio binary distribution
@@ -6,7 +6,7 @@
 .SH SYNOPSIS
 .nf
 .fam C
-\fBmake-aspkg\fP [\fIFILE\fR]
+\fBmake-aspkg\fP [OPTIONS] \fIFILE\fR
 .fam T
 .fi
 
@@ -15,7 +15,16 @@
 .br
 Download the Android Studio IDE from \fBhttps://developer.android.com/studio/index.html\fP and execute \fBmake-aspkg\fP \fIFILE\fR with the downloaded file. The Debian package is built in the current directory.
 .br
-The program requires about 1 GB free disk space in a temporary directory. The default directory is \fI/tmp\fR but you can change it by setting the environment variable \fITMPDIR\fR.
+The program requires about 500MB free disk space in a temporary directory. The default directory is \fI/tmp\fR but you can change it by setting the environment variable \fITMPDIR\fR.
+
+.SH OPTIONS
+.TP
+\fB--version\fR
+Print version information and exit.
+
+.TP
+\fB--help\fR
+Display summary of options and exit.
 
 .SH EXAMPLE
 After you downloaded Android Studio IDE from the website you need just to invoke make-aspkg to build the Debian package:

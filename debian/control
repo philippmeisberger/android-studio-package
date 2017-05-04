@@ -7,6 +7,6 @@ Standards-Version: 3.9.6
 
 Package: android-studio-package
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, unzip, fakeroot, make
+Depends: ${shlibs:Depends}, ${misc:Depends}, unzip, fakeroot, make, devscripts
 Description: Android Studio Debian package creator
  Creates Debian package from Android Studio .zip file.

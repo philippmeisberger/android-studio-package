@@ -59,12 +59,11 @@ cd ${PACKAGE_ROOT_DIR}
 dch --create --package android-studio -v "${ANDROID_STUDIO_VERSION}" "This package was created with android-studio-package."
 dch --release ""
 
-## Build the package
-debuild
+## Build the package (binary only)
+fakeroot debian/rules binary
 mv ../android-studio_*.deb "${CURRENT_DIR}/"
 
 ## Clean up
-rm ../android-studio_*
 cd ..
 rm -rf "${PACKAGE_ROOT_DIR}"
 exit 0

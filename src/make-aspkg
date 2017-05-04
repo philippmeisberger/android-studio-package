@@ -57,7 +57,7 @@ cp "${PACKAGE_AS_DIR}/LICENSE.txt" "${PACKAGE_ROOT_DIR}/debian/copyright"
 
 ## Insert maintainer name in control file
 if [ -n "${DEBFULLNAME}" ]; then
-    MAINTAINER_NAME=${DEBFULLNAME}
+    MAINTAINER_NAME="${DEBFULLNAME}"
 else
     MAINTAINER_NAME="$(getent passwd $(whoami) | cut -d ':' -f 5 | cut -d, -f 1)"
 fi
@@ -66,7 +66,7 @@ sed -i "s/MAINTAINER_NAME/${MAINTAINER_NAME}/" "${PACKAGE_ROOT_DIR}/debian/contr
 
 ## Insert maintainer mail in control file
 if [ -n "${DEBEMAIL}" ]; then
-    MAINTAINER_MAIL=${DEBEMAIL}
+    MAINTAINER_MAIL="${DEBEMAIL}"
 else
     MAINTAINER_MAIL="$(whoami)@$(hostname --fqdn )"
 fi
@@ -74,7 +74,7 @@ fi
 sed -i "s/MAINTAINER_MAIL/${MAINTAINER_MAIL}/" ${PACKAGE_ROOT_DIR}/debian/control
 
 ## Extract version
-ANDROID_STUDIO_VERSION="$(basename "${1}" | cut -d '-' -f 4)"
+ANDROID_STUDIO_VERSION="$(basename "${1}" | tr -d [:alpha:] | tr -d '-' | head -c -2)"
 
 ## Create changelog
 cd ${PACKAGE_ROOT_DIR}

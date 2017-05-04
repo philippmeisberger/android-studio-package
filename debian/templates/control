@@ -1,7 +1,7 @@
 Source: android-studio
 Priority: extra
 Maintainer: MAINTAINER_NAME <MAINTAINER_MAIL>
-Build-Depends: debhelper (>= 9), unzip
+Build-Depends: debhelper (>= 9)
 Section: devel
 Standards-Version: 3.9.6
 Homepage: https://developer.android.com/studio/index.html

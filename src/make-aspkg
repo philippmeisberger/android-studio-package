@@ -78,7 +78,7 @@ ANDROID_STUDIO_VERSION="$(basename "${1}" | tr -d [:alpha:] | tr -d '-' | head -
 
 ## Create changelog
 cd ${PACKAGE_ROOT_DIR}
-dch --create --package android-studio -v "${ANDROID_STUDIO_VERSION}" "This package was automatically created by android-studio-package."
+dch --create --package android-studio -v "${ANDROID_STUDIO_VERSION}" "This package was automatically created by android-studio-package ${VERSION}."
 dch --release ""
 
 ## Build the package (binary only)

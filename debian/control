@@ -12,5 +12,6 @@ Description: Utility for creating Android Studio Debian packages
  This package provides the capability to build a Debian package from
  an Android Studio binary distribution by running make-aspkg <Android Studio
  archive file>.
-
- Download the archive file from https://developer.android.com/studio/index.html#linux-bundle
+ .
+ Download the archive file from
+ https://developer.android.com/studio/index.html#linux-bundle

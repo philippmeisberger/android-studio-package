@@ -8,5 +8,9 @@ Standards-Version: 3.9.6
 Package: android-studio-package
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, unzip, fakeroot, make, devscripts
-Description: Android Studio Debian package creator
- Creates Debian package from Android Studio .zip file.
+Description: Utility for creating Android Studio Debian packages
+ This package provides the capability to build a Debian package from
+ an Android Studio binary distribution by running make-aspkg <Android Studio
+ archive file>.
+
+ Download the archive file from https://developer.android.com/studio/index.html#linux-bundle

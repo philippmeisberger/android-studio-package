@@ -24,18 +24,30 @@ Usage
 
 Download Android Studio IDE .zip archive file from <https://developer.android.com/studio/index.html> and execute `make-aspkg` with the downloaded file as argument. The Debian package is built in the current directory.
 
+### Building on 32-bit Debian
+
+To build Android Studio on a 32-bit Debian the 64-bit version of `libc6` library is required. Otherwise following error will occur `dpkg-shlibdeps: error: couldn't find library libc.so.6`. Use [Multiarch](https://wiki.debian.org/Multiarch/HOWTO) capabilities of Debian and enable installation of 64-bit packages:
+
+    ~# dpkg --add-architecture amd64
+
+Install 64-bit version of `libc6`
+
+    ~# apt-get install libc6:amd64
+
+Then building will succeed on 32-bit Debian.
+
 Installation of Android Studio
 ------------------------------
 
-If Android Studio should be installed on 64-bit Debian some 32-bit libraries are required. It is recommended to use [Multiarch](https://wiki.debian.org/Multiarch/HOWTO) capabilities of Debian:
+If Android Studio should be installed on 64-bit Debian some 32-bit libraries are required. It is recommended to use [Multiarch](https://wiki.debian.org/Multiarch/HOWTO) capabilities of Debian and enable installation of 32-bit packages:
 
     ~# dpkg --add-architecture i386
 
-This will enable installation of 32-bit packages. Then install Android Studio:
+Then install Android Studio
 
     ~# dpkg -i android-studio_*.deb
 
-Install missing dependencies
+Finally install missing dependencies
 
     ~# apt-get install -f
 

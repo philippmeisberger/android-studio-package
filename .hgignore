@@ -1,0 +1,8 @@
+syntax: glob
+
+## Debian package files
+**.dsc
+**.xz
+**.deb
+**.build
+**.changes

@@ -7,8 +7,8 @@ Standards-Version: 3.9.6
 Homepage: https://developer.android.com/studio/index.html
 
 Package: android-studio
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, oracle-j2sdk1.8, libncurses5:i386, libstdc++6:i386, libc6:i386, lib32z1
+Architecture: amd64 i386
+Depends: ${shlibs:Depends}, ${misc:Depends}, java8-sdk | java8-runtime | java-runtime | default-jre, lib32ncurses5 | libncurses5:i386, lib32gcc1 | libgcc1:i386, lib32stdc++6 | libstdc++6:i386, lib32z1 | zlib1g:i386
 Description: The Official IDE for Android
  Android Studio provides the fastest tools for building apps on every type of
  Android device.

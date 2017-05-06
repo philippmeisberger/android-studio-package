@@ -1,7 +1,7 @@
 Android Studio Package
 ======================
 
-Android Studio Package builds a Debian package from Android Studio binary distribution.
+Utility to build Debian package from Android Studio binary distribution.
 
 Installation
 ------------
@@ -22,7 +22,24 @@ Install the package
 Usage
 -----
 
-First you have to download the Android Studio IDE .zip file from <https://developer.android.com/studio/index.html> and execute `make-aspkg` with the downloaded file as argument. The Debian package is built in the current directory.
+Download Android Studio IDE .zip archive file from <https://developer.android.com/studio/index.html> and execute `make-aspkg` with the downloaded file as argument. The Debian package is built in the current directory.
+
+Installation of Android Studio
+------------------------------
+
+If Android Studio should be installed on 64-bit Debian some 32-bit libraries are required. It is recommended to use [Multiarch](https://wiki.debian.org/Multiarch/HOWTO) capabilities of Debian:
+
+    ~# dpkg --add-architecture i386
+
+This will enable installation of 32-bit packages. Then install Android Studio:
+
+    ~# dpkg -i android-studio_*.deb
+
+Install missing dependencies
+
+    ~# apt-get install -f
+
+Please remind that Android Studio requires at least Java 8.
 
 Questions and suggestions
 -------------------------

@@ -4,6 +4,7 @@ Maintainer: Philipp Meisberger <team@pm-codeworks.de>
 Build-Depends: debhelper (>= 9)
 Section: shells
 Standards-Version: 3.9.6
+Vcs-Git: https://github.com/philippmeisberger/android-studio-package.git
 
 Package: android-studio-package
 Architecture: all

@@ -1,7 +1,7 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: Android Studio package
 Upstream-Contact: Philipp Meisberger <team@pm-codeworks.de>
-Source: https://github.com/philippmeisberger/
+Source: https://github.com/philippmeisberger/android-studio-package
 
 Files: *
 Copyright: Copyright (c) 2017 Philipp Meisberger <team@pm-codeworks.de>

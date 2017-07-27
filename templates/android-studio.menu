@@ -2,4 +2,4 @@
   section="Applications/Programming" \
   title="Android Studio" \
   command="/usr/bin/android-studio" \
-  icon="/usr/share/pixmaps/studio.png"
+  icon="/usr/share/pixmaps/android-studio.png"

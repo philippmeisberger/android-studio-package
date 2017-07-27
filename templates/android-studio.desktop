@@ -3,6 +3,6 @@ Type=Application
 Name=Android Studio
 Comment=Offical Android IDE
 Exec=android-studio
-Icon=studio
+Icon=android-studio
 Categories=Application;IDE;Development;GTK;GUIDesigner;
 Terminal=false

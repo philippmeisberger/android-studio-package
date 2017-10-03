@@ -1,5 +1,0 @@
-?package(android-studio): needs="X11" \
-  section="Applications/Programming" \
-  title="Android Studio" \
-  command="/usr/bin/android-studio" \
-  icon="/usr/share/pixmaps/android-studio.png"

@@ -4,5 +4,5 @@ syntax: glob
 **.dsc
 **.xz
 **.deb
-**.build
+**.build*
 **.changes

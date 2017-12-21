@@ -1,5 +1,5 @@
-android-studio-package (1.0) UNRELEASED; urgency=medium
+android-studio-package (1.0) stable; urgency=medium
 
   * Initial release
 
- -- Philipp Meisberger <team@pm-codeworks.de>  Tue, 02 May 2017 09:18:34 +0200
+ -- Philipp Meisberger <team@pm-codeworks.de>  Thu, 21 Dec 2017 19:50:02 +0100

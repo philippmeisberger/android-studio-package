@@ -1,6 +1,7 @@
 android-studio-package (1.0.1) UNRELEASED; urgency=high
 
   * Use embedded JRE instead of using system JRE as it leads to strange exceptions during installation
+  * Fixed dpkg-shlibdeps error
 
  -- Philipp Meisberger <team@pm-codeworks.de>  Fri, 27 Apr 2018 14:48:15 +0200
 

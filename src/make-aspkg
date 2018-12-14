@@ -78,6 +78,9 @@ cd ${PACKAGE_ROOT_DIR}
 dch --create --package android-studio -v "${ANDROID_STUDIO_VERSION}" "This package was automatically created by android-studio-package ${VERSION}."
 dch --release ""
 
+## Private library location
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:debian/android-studio/usr/lib/android-studio/bin/lldb/lib/
+
 ## Build the package (binary only)
 fakeroot debian/rules binary
 mv ../android-studio_*.deb "${CURRENT_DIR}/"

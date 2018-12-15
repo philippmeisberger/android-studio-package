@@ -11,3 +11,6 @@ override_dh_strip:
 	# skip dh_strip otherwise following error occurs:
 	# Unable to recognise the format of the input file
 	# 'debian/android-studio/usr/lib/android-studio/plugins/android/resources/perfa/armeabi-v7a/libperfa.so'
+
+override_dh_shlibdeps:
+	dh_shlibdeps --dpkg-shlibdeps-params=--ignore-missing-info

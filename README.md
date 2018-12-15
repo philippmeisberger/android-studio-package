@@ -1,6 +1,8 @@
 Android Studio Package
 ======================
 
+[![Build Status](https://travis-ci.org/philippmeisberger/android-studio-package.svg?branch=master)](https://travis-ci.org/philippmeisberger/android-studio-package)
+
 Utility to build Debian package from Android Studio binary distribution.
 
 Installation

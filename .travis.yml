@@ -1,0 +1,27 @@
+language: bash
+sudo: required
+
+os:
+  - linux
+
+env:
+  global:
+    - ANDROID_STUDIO_VERSION=3.2.1.0
+    - ANDROID_STUDIO_FILE=android-studio-ide-181.5056338-linux.zip
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install -y debhelper devscripts
+
+install:
+  - dpkg-buildpackage -uc -us
+  - sudo dpkg -i ../android-studio-package*.deb
+
+script:
+  - wget https://dl.google.com/dl/android/studio/ide-zips/${ANDROID_STUDIO_VERSION}/${ANDROID_STUDIO_FILE}
+  - make-aspkg ${ANDROID_STUDIO_FILE}
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change

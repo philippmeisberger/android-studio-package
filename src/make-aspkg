@@ -84,7 +84,7 @@ dch --release ""
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:debian/android-studio/usr/lib/android-studio/bin/lldb/lib/
 
 ## Build the package (binary only)
-fakeroot debian/rules binary
+dpkg-buildpackage -b -uc -us
 mv ../android-studio_*.deb "${CURRENT_DIR}/"
 
 ## Clean up

@@ -13,4 +13,4 @@ override_dh_strip:
 	# 'debian/android-studio/usr/lib/android-studio/plugins/android/resources/perfa/armeabi-v7a/libperfa.so'
 
 override_dh_shlibdeps:
-	dh_shlibdeps --dpkg-shlibdeps-params=--ignore-missing-info
+	dh_shlibdeps -- --ignore-missing-info

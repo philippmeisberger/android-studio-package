@@ -19,7 +19,7 @@ install:
 
 script:
   - wget https://dl.google.com/dl/android/studio/ide-zips/${ANDROID_STUDIO_VERSION}/${ANDROID_STUDIO_FILE}
-  - make-aspkg ${ANDROID_STUDIO_FILE}
+  - travis_wait make-aspkg ${ANDROID_STUDIO_FILE}
 
 notifications:
   email:

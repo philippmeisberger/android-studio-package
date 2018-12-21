@@ -1,7 +1,7 @@
 Source: android-studio-package
 Priority: extra
 Maintainer: Philipp Meisberger <team@pm-codeworks.de>
-Build-Depends: debhelper (>= 9)
+Build-Depends: debhelper (>= 9), bash-completion
 Section: shells
 Standards-Version: 3.9.8
 Vcs-Git: https://github.com/philippmeisberger/android-studio-package.git

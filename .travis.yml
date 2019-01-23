@@ -1,9 +1,6 @@
 language: bash
 sudo: required
 
-os:
-  - linux
-
 env:
   global:
     - ANDROID_STUDIO_VERSION=3.2.1.0

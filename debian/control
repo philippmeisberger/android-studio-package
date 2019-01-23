@@ -8,7 +8,7 @@ Vcs-Git: https://github.com/philippmeisberger/android-studio-package.git
 
 Package: android-studio-package
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, unzip, fakeroot, make, devscripts
+Depends: ${misc:Depends}, unzip, fakeroot, make, devscripts
 Description: Utility for creating Android Studio Debian packages
  This package provides the capability to build a Debian package from
  an Android Studio binary distribution by running make-aspkg <Android Studio

@@ -5,4 +5,5 @@ Comment=Offical Android IDE
 Exec=android-studio
 Icon=android-studio
 Categories=Application;IDE;Development;GTK;GUIDesigner;
+MimeType=text/x-java;
 Terminal=false

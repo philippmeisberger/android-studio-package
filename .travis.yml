@@ -3,8 +3,8 @@ sudo: required
 
 env:
   global:
-    - ANDROID_STUDIO_VERSION=3.2.1.0
-    - ANDROID_STUDIO_FILE=android-studio-ide-181.5056338-linux.zip
+    - ANDROID_STUDIO_VERSION=3.3.0.20
+    - ANDROID_STUDIO_FILE=android-studio-ide-182.5199772-linux.zip
 
 before_install:
   - sudo apt-get update

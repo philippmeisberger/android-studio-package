@@ -6,6 +6,7 @@ Section: shells
 Standards-Version: 3.9.8
 Homepage: https://www.pm-codeworks.de/android-studio-package.html
 Vcs-Git: https://github.com/philippmeisberger/android-studio-package.git
+Vcs-Browser: https://github.com/philippmeisberger/android-studio-package
 
 Package: android-studio-package
 Architecture: all

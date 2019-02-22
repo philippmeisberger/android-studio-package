@@ -12,17 +12,11 @@ There are two ways of installing Android Studio Package: Installation of the sta
 
 ### Installation of the stable version
 
-Add PM Codeworks repository
-
-* Debian 8:
-
-    `~# echo "deb http://apt.pm-codeworks.de jessie main" | tee /etc/apt/sources.list.d/pm-codeworks.list`
-
-* Debian 9:
+Add PM Code Works repository
 
     `~# echo "deb http://apt.pm-codeworks.de stretch main" | tee /etc/apt/sources.list.d/pm-codeworks.list`
 
-Add PM Codeworks key
+Add PM Code Works signing key
 
     ~# wget -qO - http://apt.pm-codeworks.de/pm-codeworks.de.gpg | apt-key add -
     ~# apt-get update

@@ -1,5 +1,5 @@
 Source: android-studio-package
-Priority: extra
+Priority: optional
 Maintainer: Philipp Meisberger <team@pm-codeworks.de>
 Build-Depends: debhelper (>= 9), bash-completion
 Section: shells

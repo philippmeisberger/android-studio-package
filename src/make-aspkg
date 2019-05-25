@@ -45,7 +45,7 @@ CURRENT_DIR="$(pwd)"
 
 ## Extract Android Studio in "lib" directory
 mkdir -p "${PACKAGE_LIB_DIR}"
-unzip "${1}" -d "${PACKAGE_LIB_DIR}"
+tar -v -C "${PACKAGE_LIB_DIR}" -xf "${1}"
 
 ## Copy Debian package files
 mkdir "${PACKAGE_ROOT_DIR}/debian/"

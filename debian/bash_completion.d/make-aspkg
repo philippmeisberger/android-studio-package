@@ -13,7 +13,7 @@ _make-aspkg() {
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
         return 0
     else
-        COMPREPLY=( $(compgen -o plusdirs -f -X '!*.zip' -- ${cur}) )
+        COMPREPLY=( $(compgen -o plusdirs -f -X '!*.tar.gz' -- ${cur}) )
         return 0
     fi
 }

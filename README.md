@@ -49,7 +49,7 @@ Install the package
 Usage
 -----
 
-Download Android Studio IDE .zip archive file from <https://developer.android.com/studio/index.html> and execute `make-aspkg` with the downloaded file as argument. The Debian package is built in the current directory.
+Download Android Studio IDE archive file from <https://developer.android.com/studio/index.html> and execute `make-aspkg` with the downloaded file as argument. The Debian package is built in the current directory.
 
 ### Building on 32-bit Debian
 

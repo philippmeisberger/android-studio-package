@@ -73,7 +73,7 @@ fi
 sed -i "s/MAINTAINER_MAIL/${MAINTAINER_MAIL}/" ${PACKAGE_ROOT_DIR}/debian/control
 
 ## Extract version
-ANDROID_STUDIO_VERSION="$(basename "${1}" | tr -d [:alpha:] | tr -d '-' | head -c -2)"
+ANDROID_STUDIO_VERSION="$(basename "${1}" | tr -d [:alpha:] | tr -d '-' | head -c -3)"
 
 ## Create changelog
 cd ${PACKAGE_ROOT_DIR}

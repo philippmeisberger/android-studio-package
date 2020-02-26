@@ -1,5 +1,5 @@
 Source: android-studio
-Priority: extra
+Priority: optional
 Maintainer: MAINTAINER_NAME <MAINTAINER_MAIL>
 Build-Depends: debhelper (>= 9)
 Section: devel

@@ -1,10 +1,11 @@
-android-studio-package (1.0.1) UNRELEASED; urgency=high
+android-studio-package (1.0.1) stable; urgency=high
 
+  * Support for .tar.gz distribution of Android Studio
   * Use embedded JRE instead of using system JRE as it leads to strange
     exceptions during installation
-  * Fixed dpkg-shlibdeps error
+  * Fixed dpkg-shlibdeps errors
 
- -- Philipp Meisberger <team@pm-codeworks.de>  Fri, 27 Apr 2018 14:48:15 +0200
+ -- Philipp Meisberger <team@pm-codeworks.de>  Thu, 27 Feb 2020 13:03:39 +0100
 
 android-studio-package (1.0) stable; urgency=medium
 
